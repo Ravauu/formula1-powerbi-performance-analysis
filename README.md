@@ -14,27 +14,21 @@ The project covers the full BI workflow:
 
 ## Data Model
 
-The report uses a **star schema** with `FactRaceResults` as the central fact table and dedicated dimensions for:
+The report uses a **star schema** with `FactRaceResults` as the central fact table and dedicated dimensions for drivers, constructors, races, circuits and dates.
 
-- Drivers
-- Constructors
-- Races
-- Circuits
-- Dates
-
-The fact table grain is:
+The main fact table grain is:
 
 > **One row = one driver in one race**
 
 Relationships use **1:* single-direction filtering from dimensions to the fact table**.
 
-## Analysis
+![Data Model](screenshots/DataModel.png)
 
-The report contains three main analytical pages.
+## Dashboard Pages
 
 ### Season Overview
 
-Season-level view with driver and constructor standings, championship progression and overall performance analysis.
+High-level view of the season including driver and constructor standings, championship progression and overall performance analysis.
 
 ![Season Overview](screenshots/SeasonOverview.png)
 
@@ -52,7 +46,7 @@ Interactive constructor analysis including team KPIs, driver contribution, point
 
 ## DAX & Power BI
 
-The project uses DAX for calculations such as:
+The project uses DAX for calculations including:
 
 - rankings
 - cumulative points
@@ -70,6 +64,6 @@ The report was also checked using **Power BI Performance Analyzer** to validate 
 ## Files
 
 - `F1-PowerBI.pbix` — complete Power BI report
-- `screenshots/` — dashboard previews
+- `screenshots/` — dashboard and data model previews
 
 [Download the Power BI file](./F1-PowerBI.pbix)
