@@ -10,7 +10,6 @@ The project covers the full BI workflow:
 - interactive Power BI dashboards
 - performance validation
 
-![Season Overview](screenshots/SeasonOverview.png)
 
 ## Data Model
 
